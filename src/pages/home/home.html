@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background" scroll="false">
+  <ion-list>
+  <ion-item class="text" *ngFor="let item of items | async">
+    {{item | json}}
+  </ion-item>
+  </ion-list>
+
+  <img src = "assets/img/DontTouchMe-Logo.png"/>
+
+      <button ion-button full round large (click)="signInWithFacebook()" icon-left>
+        <ion-icon name="logo-facebook"></ion-icon>  
+        Facebook Login
+        </button>
+
+</ion-content>
